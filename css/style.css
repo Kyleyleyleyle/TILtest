@@ -1,1 +1,89 @@
+#navlogo {
+  width: 250px;
+  margin: auto 10rem auto auto;
+}
+
+.nav-item {
+  padding: 0 3rem;
+}
+
+.nav-link {
+font-size: 23px;
+text-align: center;
+padding: auto 40px auto 40px;
+}
+
+/* Some custom styles to beautify this example */
+  .main-content{
+  min-height: 1000px;
+      ackground: #dbdfe5;
+  }
+  .sidebar-content{
+      min-height: 400px;
+      margin-bottom: 10px;
+      ackground: #b4bac0;
+  }
+  .sidebar-content2{
+      min-height: 50px;
+      margin-bottom: 40px;
+      ackground: #b4bac0;
+  }
+
+  .sidebar-content0{
+      max-height: 1px;
+      margin-bottom: 30px;
+      ackground: #b4bac0;
+  }
+
+  #tip {
+    max-width: 50%;
+  }
+#tiph {
+color: black;
+}
+
+#tipp{
+color: black;
+}
+
+
+  #tv {
+    max-width: 40%;
+  }
+
+#tvh{
+color: black;
+}
+
+#tvp {
+color: black;
+}
+
+  #ter {
+        width: 50%;
+
+  }
+
+  #landscape {
+
+    margin: 75px auto auto 0;
+    font-family: "arial";
+    font-size: 400%;
+    font-weight: bold;
+    line-height: 1.5;
+
+  }
+
+  #design {
+
+    position: relative;
+    left: 5rem;
+    font-weight: lighter;
+  font-size: 150%;
+  }
+
+  #whatsnew {
+font-size: 40px;
+color: #03256C;
+  }
 
