@@ -7,7 +7,10 @@
 
   <!--Bootstrap and Stylesheet-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
+  <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+   />
 
   <!--Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,47 +28,86 @@
   <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="animate__animated animate__fadeIn">
+
+<style>
+.animate__animated.animate__fadeIn {--animate-duration: 2s;}
+</style>
 
   <div class="container-fluid">
 
 
     <!-- Nav Bar -->
+<div class="container-fluid navcon">
+    <nav class="navbar navbar-expand-xl navbar-dark">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <a class="navbar-brand" href="index.html"><img id="navlogo" src="TILimages/logo.png" alt="UofT Logo"></a>
+      <a class="navbar-brand" href="https://www.utoronto.ca/"><img id="navlogo"
+        src="https://lsm.utoronto.ca/webapp/osm_website/r/118/files/static/v31/UofT_Logo.svg" alt="UofT Logo"> </a>
+
+<div style="height: 50px; border-left: 1px solid white"></div>
+
+        <a class="navbar-brand" href="index.html"><img id="navlogo"
+          <img class="TIL_Logo" src="https://lsm.utoronto.ca/webapp/osm_website/r/118/files/static/v31/TIL_Logo.svg" alt=""> </a>
+
+
+
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav align-items-end">
+        <ul class="navbar-nav align-items-end ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="initiatives.html">Initiatives</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="approach.html">Approach</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="news.html">News and Reports</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="feedback.html">Feedback</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="redesign.html">Classroom	Redesign</a>
-          </li>
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="initiatives.html">Initiatives</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="redesign.html">Classroom Redesign</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="approach.html">Approach</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="news.html">News and Reports</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
+
         </ul>
       </div>
     </nav>
 
-  <style>
+<style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.navcon {
+  padding: 0;
+}
+
+.navbar {
+  background-color: #012A5D;
+}
+
   #navlogo {
     width: 150px;
-    margin: auto 10rem auto auto;
+    margin: auto auto auto auto;
   }
+
+.TIL_Logo {
+  position: relative;
+  left: 1rem;
+  margin-right: 2rem;
+}
 
   .nav-item {
     padding: 0 2rem;
@@ -78,15 +120,40 @@
   }
 </style>
 
-    <h1> Feedback </h1>
 
-    <ul class="linklist">
-      <li class="l1"> <a href="feedback\participants.html"> Feedback from Project Participants </a> </li>
-      <li class="l2"> <a href="feedback\contact.html"> Contact TIL </a> </li>
-    </ul>
+<div class="container">
 
 
+<h1> Feedback </h1>
 
+<h4>Looking to get in touch with TIL? You can do so using the contact information below </h4>
+
+
+</div>
+
+
+<style media="screen">
+
+.container {
+  padding: 5rem 20%;
+}
+
+h1 {
+  color: #012A5D;
+}
+</style>
+
+
+<div class="container-fluid bott">
+
+</div>
+
+<style media="screen">
+  .bott {
+    height: 150px;
+    background-color: #012A5D;
+  }
+</style>
 
 </body>
 </html>
