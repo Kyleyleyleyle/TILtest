@@ -15,6 +15,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
     rel="stylesheet">
+    <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+ />
 
   <!--script for Bootstrap-->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -25,25 +29,43 @@
   <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="animate__animated animate__fadeIn">
+
+<style>
+.animate__animated.animate__fadeIn {--animate-duration: 2s;}
+</style>
 
   <div class="container-fluid">
 
 
     <!-- Nav Bar -->
+<div class="container-fluid navcon">
+    <nav class="navbar navbar-expand-xl navbar-dark">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <a class="navbar-brand" href="index.html"><img id="navlogo" src="TILimages/logo.png" alt="UofT Logo"></a>
+      <a class="navbar-brand" href="https://www.utoronto.ca/"><img id="navlogo"
+        src="https://lsm.utoronto.ca/webapp/osm_website/r/118/files/static/v31/UofT_Logo.svg" alt="UofT Logo"> </a>
+
+<div style="height: 50px; border-left: 1px solid white"></div>
+
+        <a class="navbar-brand" href="index.html"><img id="navlogo"
+          <img class="TIL_Logo" src="https://lsm.utoronto.ca/webapp/osm_website/r/118/files/static/v31/TIL_Logo.svg" alt=""> </a>
+
+
+
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav align-items-end">
+        <ul class="navbar-nav align-items-end ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="initiatives.html">Initiatives</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="redesign.html">Classroom Redesign</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="approach.html">Approach</a>
@@ -54,18 +76,38 @@
           <li class="nav-item">
             <a class="nav-link" href="feedback.html">Feedback</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="redesign.html">Classroom	Redesign</a>
-          </li>
         </ul>
       </div>
     </nav>
 
 <style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.navcon {
+  padding: 0;
+}
+
+.navbar {
+  background-color: #012A5D;
+}
+
   #navlogo {
     width: 150px;
-    margin: auto 10rem auto auto;
+    margin: auto auto auto auto;
   }
+
+.TIL_Logo {
+  position: relative;
+  left: 1rem;
+  margin-right: 2rem;
+}
 
   .nav-item {
     padding: 0 2rem;
@@ -78,6 +120,374 @@
   }
 </style>
 
+
+
+<!--body content-->
+
+<div class="container">
+  <div class="row">
+    <div class="col slide">
+      <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row">
+<div class="col-6">
+
+
+
+      <img class="d-block w-100 yess" src="https://canadaeast1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Futoronto-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!MrRp2iHHUE6R0EaY7xekgdeM8908kzRKsd0kUuMn5ZgHI1Ks2TZDRbd5qUNLBy23%2Fitems%2F01455WYHJ3N6Z6LGVLNNG3W7NID7MSMK72%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdXRvcm9udG8tbXkuc2hhcmVwb2ludC5jb21ANzhhYWMyMjYtMmYwMy00YjRkLTkwMzctYjQ2ZDU2YzU1MjEwIiwiaXNzIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwIiwibmJmIjoiMTYyNTc0NTYwMCIsImV4cCI6IjE2MjU3NjcyMDAiLCJlbmRwb2ludHVybCI6IjM4M3BJY0NjRHNuRTM4c3dGUndYRHBveXNqSHovWWZTQjBGU2ZxWGxjaWs9IiwiZW5kcG9pbnR1cmxMZW5ndGgiOiIxMTgiLCJpc2xvb3BiYWNrIjoiVHJ1ZSIsInZlciI6Imhhc2hlZHByb29mdG9rZW4iLCJzaXRlaWQiOiJaR0UyT1dJME16SXRZemN5TVMwMFpUVXdMVGt4WkRBdE5EWTVPR1ZtTVRkaE5EZ3giLCJzaWduaW5fc3RhdGUiOiJbXCJrbXNpXCJdIiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfGt5bGUucm9iZXJ0c0B1dG9yb250by5jYSIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAwODdlYTZlMmFAbGl2ZS5jb20iLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMyJ9.eWxra2hQZ203YmdEaHZoOU9OZW0yNFI2bDlPQS9rNjhSSjI5RDd0cCtscz0&encodeFailures=1&width=1104&height=736&srcWidth=6000&srcHeight=4000" alt="First slide">
+</div>
+
+<div class="col-6">
+
+
+
+      <img class="d-block w-100 yess" src="https://canadaeast1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Futoronto-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!MrRp2iHHUE6R0EaY7xekgdeM8908kzRKsd0kUuMn5ZgHI1Ks2TZDRbd5qUNLBy23%2Fitems%2F01455WYHL6MBEIV4BN2FH24ACDHN3WWHZQ%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdXRvcm9udG8tbXkuc2hhcmVwb2ludC5jb21ANzhhYWMyMjYtMmYwMy00YjRkLTkwMzctYjQ2ZDU2YzU1MjEwIiwiaXNzIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwIiwibmJmIjoiMTYyNTc0NTYwMCIsImV4cCI6IjE2MjU3NjcyMDAiLCJlbmRwb2ludHVybCI6IjM4M3BJY0NjRHNuRTM4c3dGUndYRHBveXNqSHovWWZTQjBGU2ZxWGxjaWs9IiwiZW5kcG9pbnR1cmxMZW5ndGgiOiIxMTgiLCJpc2xvb3BiYWNrIjoiVHJ1ZSIsInZlciI6Imhhc2hlZHByb29mdG9rZW4iLCJzaXRlaWQiOiJaR0UyT1dJME16SXRZemN5TVMwMFpUVXdMVGt4WkRBdE5EWTVPR1ZtTVRkaE5EZ3giLCJzaWduaW5fc3RhdGUiOiJbXCJrbXNpXCJdIiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfGt5bGUucm9iZXJ0c0B1dG9yb250by5jYSIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAwODdlYTZlMmFAbGl2ZS5jb20iLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMyJ9.eWxra2hQZ203YmdEaHZoOU9OZW0yNFI2bDlPQS9rNjhSSjI5RDd0cCtscz0&encodeFailures=1&width=1104&height=736&srcWidth=6000&srcHeight=4000" alt="Second slide">
+</div>
+</div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="row">
+<div class="col-6">
+
+
+
+      <img class="d-block w-100 yess" src="https://canadaeast1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Futoronto-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!MrRp2iHHUE6R0EaY7xekgdeM8908kzRKsd0kUuMn5ZgHI1Ks2TZDRbd5qUNLBy23%2Fitems%2F01455WYHPLDBVCBDUXXNGJYJJ3YSTEHD3C%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdXRvcm9udG8tbXkuc2hhcmVwb2ludC5jb21ANzhhYWMyMjYtMmYwMy00YjRkLTkwMzctYjQ2ZDU2YzU1MjEwIiwiaXNzIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwIiwibmJmIjoiMTYyNTc0NTYwMCIsImV4cCI6IjE2MjU3NjcyMDAiLCJlbmRwb2ludHVybCI6IjM4M3BJY0NjRHNuRTM4c3dGUndYRHBveXNqSHovWWZTQjBGU2ZxWGxjaWs9IiwiZW5kcG9pbnR1cmxMZW5ndGgiOiIxMTgiLCJpc2xvb3BiYWNrIjoiVHJ1ZSIsInZlciI6Imhhc2hlZHByb29mdG9rZW4iLCJzaXRlaWQiOiJaR0UyT1dJME16SXRZemN5TVMwMFpUVXdMVGt4WkRBdE5EWTVPR1ZtTVRkaE5EZ3giLCJzaWduaW5fc3RhdGUiOiJbXCJrbXNpXCJdIiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfGt5bGUucm9iZXJ0c0B1dG9yb250by5jYSIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAwODdlYTZlMmFAbGl2ZS5jb20iLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMyJ9.eWxra2hQZ203YmdEaHZoOU9OZW0yNFI2bDlPQS9rNjhSSjI5RDd0cCtscz0&encodeFailures=1&width=1104&height=736&srcWidth=6000&srcHeight=4000">
+    </div>
+
+<div class="col-6">
+
+
+
+      <img class="d-block w-100 yess" src="https://canadaeast1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Futoronto-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!MrRp2iHHUE6R0EaY7xekgdeM8908kzRKsd0kUuMn5ZgHI1Ks2TZDRbd5qUNLBy23%2Fitems%2F01455WYHKJ5NLWEFEMTZEZQMQQRHYZC5UN%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdXRvcm9udG8tbXkuc2hhcmVwb2ludC5jb21ANzhhYWMyMjYtMmYwMy00YjRkLTkwMzctYjQ2ZDU2YzU1MjEwIiwiaXNzIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwIiwibmJmIjoiMTYyNTc0NTYwMCIsImV4cCI6IjE2MjU3NjcyMDAiLCJlbmRwb2ludHVybCI6IjM4M3BJY0NjRHNuRTM4c3dGUndYRHBveXNqSHovWWZTQjBGU2ZxWGxjaWs9IiwiZW5kcG9pbnR1cmxMZW5ndGgiOiIxMTgiLCJpc2xvb3BiYWNrIjoiVHJ1ZSIsInZlciI6Imhhc2hlZHByb29mdG9rZW4iLCJzaXRlaWQiOiJaR0UyT1dJME16SXRZemN5TVMwMFpUVXdMVGt4WkRBdE5EWTVPR1ZtTVRkaE5EZ3giLCJzaWduaW5fc3RhdGUiOiJbXCJrbXNpXCJdIiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfGt5bGUucm9iZXJ0c0B1dG9yb250by5jYSIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAwODdlYTZlMmFAbGl2ZS5jb20iLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMyJ9.eWxra2hQZ203YmdEaHZoOU9OZW0yNFI2bDlPQS9rNjhSSjI5RDd0cCtscz0&encodeFailures=1&width=1104&height=736&srcWidth=6000&srcHeight=4000">
+</div>
+</div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="row">
+<div class="col-6">
+
+
+
+      <img class="d-block w-100 yess" src="https://canadaeast1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Futoronto-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!MrRp2iHHUE6R0EaY7xekgdeM8908kzRKsd0kUuMn5ZgHI1Ks2TZDRbd5qUNLBy23%2Fitems%2F01455WYHKZZUUFNWHMMZC26UJI5WMQD7NE%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdXRvcm9udG8tbXkuc2hhcmVwb2ludC5jb21ANzhhYWMyMjYtMmYwMy00YjRkLTkwMzctYjQ2ZDU2YzU1MjEwIiwiaXNzIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwIiwibmJmIjoiMTYyNTc0NTYwMCIsImV4cCI6IjE2MjU3NjcyMDAiLCJlbmRwb2ludHVybCI6IjM4M3BJY0NjRHNuRTM4c3dGUndYRHBveXNqSHovWWZTQjBGU2ZxWGxjaWs9IiwiZW5kcG9pbnR1cmxMZW5ndGgiOiIxMTgiLCJpc2xvb3BiYWNrIjoiVHJ1ZSIsInZlciI6Imhhc2hlZHByb29mdG9rZW4iLCJzaXRlaWQiOiJaR0UyT1dJME16SXRZemN5TVMwMFpUVXdMVGt4WkRBdE5EWTVPR1ZtTVRkaE5EZ3giLCJzaWduaW5fc3RhdGUiOiJbXCJrbXNpXCJdIiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfGt5bGUucm9iZXJ0c0B1dG9yb250by5jYSIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAwODdlYTZlMmFAbGl2ZS5jb20iLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMyJ9.eWxra2hQZ203YmdEaHZoOU9OZW0yNFI2bDlPQS9rNjhSSjI5RDd0cCtscz0&encodeFailures=1&width=1104&height=736&srcWidth=6000&srcHeight=4000">
+</div>
+
+<div class="col-6">
+
+
+
+      <img class="d-block w-100 yess" src="https://canadaeast1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Futoronto-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!MrRp2iHHUE6R0EaY7xekgdeM8908kzRKsd0kUuMn5ZgHI1Ks2TZDRbd5qUNLBy23%2Fitems%2F01455WYHJYICT6PLFDHRCZVWTQI7I5NBMC%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdXRvcm9udG8tbXkuc2hhcmVwb2ludC5jb21ANzhhYWMyMjYtMmYwMy00YjRkLTkwMzctYjQ2ZDU2YzU1MjEwIiwiaXNzIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwIiwibmJmIjoiMTYyNTc0NTYwMCIsImV4cCI6IjE2MjU3NjcyMDAiLCJlbmRwb2ludHVybCI6IjM4M3BJY0NjRHNuRTM4c3dGUndYRHBveXNqSHovWWZTQjBGU2ZxWGxjaWs9IiwiZW5kcG9pbnR1cmxMZW5ndGgiOiIxMTgiLCJpc2xvb3BiYWNrIjoiVHJ1ZSIsInZlciI6Imhhc2hlZHByb29mdG9rZW4iLCJzaXRlaWQiOiJaR0UyT1dJME16SXRZemN5TVMwMFpUVXdMVGt4WkRBdE5EWTVPR1ZtTVRkaE5EZ3giLCJzaWduaW5fc3RhdGUiOiJbXCJrbXNpXCJdIiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfGt5bGUucm9iZXJ0c0B1dG9yb250by5jYSIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAwODdlYTZlMmFAbGl2ZS5jb20iLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMyJ9.eWxra2hQZ203YmdEaHZoOU9OZW0yNFI2bDlPQS9rNjhSSjI5RDd0cCtscz0&encodeFailures=1&width=1104&height=736&srcWidth=6000&srcHeight=4000">
+</div>
+</div>
+    </div>
+
+
+
+</div>
+</div>
+    </div>
+
+
+
+
+
+  </div>
+
+</div>
+
+<style media="screen">
+
+.yess {
+  border: solid 2px black;
+}
+
+
+  .slide {
+    padding: 2rem;
+  }
+</style>
+
+
+
+
+
+<div class="container-fluid band">
+  <div class="innercon">
+
+
+<h1 class="abouth">Classroom Redesign</h1>
+<br>
+<p class="ph">TIL’s Classroom Redesign initiative is a renovation project involving classroom spaces on the U of T campus. This project aims to meet the everchanging needs of instructors and students. As student and faculty demographics continue to evolve, new technology and emerging teaching practices are changing the scope of what a successful instructional space looks like. In response, TIL’s Classroom Redesign project constructs classrooms that support a diverse range of program offerings, while accounting for the diverse needs of classroom users. You can read more about the different aspects of our redesign methodology by clicking on the links below.  </p>
+
+</div>
+</div>
+
+<style>
+
+
+.innercon {
+  margin: 0 auto 5rem auto;
+  width: 90%
+
+}
+
+.band {
+
+  background-color:  white;
+width: 80%
+}
+
+.abouth {
+  position: relative;
+color: #012A5D;
+  margin: 0;
+  width: 80%;
+}
+
+.ulh {
+  position: relative;
+
+
+  margin: 0;
+  width: 80%;
+}
+
+.ph  {
+  position: relative;
+
+
+  margin: 0;
+  width: 90%;
+}
+
+</style>
+
+
+
+
+<div class="container">
+  <div class="row">
+
+
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-2 po">
+      <img class="yo1"src="http://blogs.studentlife.utoronto.ca/innovationhub/files/2021/06/TIL_ThemeVisual-1-768x682.png" alt="">
+  </div>
+    <div class="col-2 po">
+      <img class="yo" src="http://blogs.studentlife.utoronto.ca/innovationhub/files/2021/06/Report-Icons_Build-community-150x150.png" alt="">
+  </div>
+<div class="col-2 po">
+  <img class="yo" src="http://blogs.studentlife.utoronto.ca/innovationhub/files/2021/06/Learning-and-Growing-in-Community-1-1-150x150.jpg" alt="">
+</div>
+<div class="col-2 po">
+  <img class="yo" src="http://blogs.studentlife.utoronto.ca/innovationhub/files/2021/06/Report-Icons_Community-Support-300x300.png" alt="">
+</div>
+
+
+  </div>
+<div class="row d-flex justify-content-center">
+  <div class="col-2 tex">
+    <a class="communityp" href="redesign\tech.html"> <h3>Instructional Technology</h3>  See More <i class="fas fa-arrow-right"></i> </a>
+  </div>
+  <div class="col-2 tex">
+    <a class="communityp" href="redesign\active.html"> <h3>Active Learning</h3>  See More <i class="fas fa-arrow-right"></i> </a>
+  </div>
+  <div class="col-2 tex">
+    <a class="communityp" href="redesign\access.html"> <h3>Accessibility</h3>  See More <i class="fas fa-arrow-right"></i> </a>
+  </div>
+  <div class="col-2 tex">
+    <a class="communityp" href="redesign\rdgallery.html"> <h3>Classroom Redesign Project Gallery</h3>  See More <i class="fas fa-arrow-right"></i> </a>
+</div>
+</div>
+
+
+
+
+</div>
+
+
+<style>
+
+
+.po {
+  border: solid 2px black;
+  padding: 0;
+  margin: 1rem;
+align-items: flex-start;
+}
+.hold {
+  padding: 5% 20%;
+}
+
+.yo1 {
+  width: 100%;
+
+
+}
+
+.yo {
+  width: 100%;
+
+}
+
+.init{
+  color: #012A5D;
+
+}
+
+  .initp {
+    width: 100%;
+    border: solid 2px black;
+}
+
+h3 {
+  color: black;
+}
+.tex {color: black;
+padding: 0;
+margin: 0 1rem 0 1rem; 
+}
+
+</style>
+
+
+<!--
+
+<section class="bottom">
+
+
+<div class="container bodcon">
+  <div class="row row1">
+
+    <div class="col-3 community">
+    </div>
+
+    <div class="col-3 community">
+    </div>
+
+    <div class="col-3 community">
+    </div>
+
+    <div class="col-3 community">
+    </div>
+
+  </div>
+</div>
+<div class="container">
+  <div class="row row2">
+
+    <div class="col-3 communityp">
+      <a class="communityp" href="redesign\tech.html"> <h3>Instructional Technology</h3>  See More <i class="fas fa-arrow-right"></i> </a>
+    </div>
+
+    <div class="col-3 communityp">
+      <a class="communityp" href="redesign\active.html"> <h3>Active Learning</h3>  See More <i class="fas fa-arrow-right"></i> </a>
+    </div>
+
+    <div class="col-3 communityp">
+      <a class="communityp" href="redesign\access.html"> <h3>Accessibility</h3>  See More <i class="fas fa-arrow-right"></i> </a>
+    </div>
+
+    <div class="col-3 communityp">
+      <a class="communityp" href="redesign\rdgallery.html"> <h3>Classroom Redesign Project Gallery</h3>  See More <i class="fas fa-arrow-right"></i> </a>
+    </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+</section>
+
+<style>
+
+.container {
+  position: relative;
+  padding: 5% 15%
+}
+
+.bottom {
+background-color: #012A5D;
+
+}
+
+.bodcon {
+
+  width: 90%
+}
+
+.row1 {
+margin: 0;
+padding: 0;
+
+}
+
+.row2 {
+  width: 100%;
+}
+
+.community {
+  height: 200px;
+padding: 2rem;
+  border: solid 2px white;
+}
+
+.origin {
+  height: 300px;
+
+  border: solid 2px white;
+}
+
+.communityp {
+  color:white;
+}
+
+.originp {
+  color:white;
+}
+
+marg1 {
+  background-color: red;
+  padding: 0;
+}
+
+marg2 {background-color: blue;
+padding: 0;}
+
+marg3 {background-color: red;
+padding: -1rem;}
+
+#htag {
+  width:
+}
+</style>
+
+<!--
+
+<div class="container-fluid band3">
+
+</div>
+
+
+<style>
+
+
+.band3 {
+  margin: 10rem auto 20rem auto;
+  height: 100px;
+background-color: white;
+}
+
+</style>
+-->
+
+<!--
+
+
     <h1>Classroom Redesign</h1>
 
     <ul class="linklist">
@@ -87,7 +497,7 @@
       <li class="l4"> <a href="redesign\rdgallery.html"> Classroom Redesign Project Gallery </a> </li>
     </ul>
 
-
+-->
 
 
 </body>
