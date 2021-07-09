@@ -7,7 +7,10 @@
 
   <!--Bootstrap and Stylesheet-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
+  <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+   />
 
   <!--Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,68 +28,400 @@
   <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="animate__animated animate__fadeIn">
+
+<style>
+.animate__animated.animate__fadeIn {--animate-duration: 2s;}
+</style>
 
   <div class="container-fluid">
 
 
     <!-- Nav Bar -->
+    <div class="container-fluid navcon">
+      <nav class="navbar navbar-expand-xl navbar-dark">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <a class="navbar-brand" href="index.html"><img id="navlogo" src="TILimages/logo.png" alt="UofT Logo"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav align-items-end">
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="initiatives.html">Initiatives</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="approach.html">Approach</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="news.html">News and Reports</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="feedback.html">Feedback</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="redesign.html">Classroom	Redesign</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        <a class="navbar-brand" href="https://www.utoronto.ca/"><img id="navlogo" src="https://lsm.utoronto.ca/webapp/osm_website/r/118/files/static/v31/UofT_Logo.svg" alt="UofT Logo"> </a>
 
-   <style>
-  #navlogo {
-    width: 150px;
-    margin: auto 10rem auto auto;
+        <div style="height: 50px; border-left: 1px solid white"></div>
+
+        <a class="navbar-brand" href="index.html"><img id="navlogo" <img class="TIL_Logo" src="https://lsm.utoronto.ca/webapp/osm_website/r/118/files/static/v31/TIL_Logo.svg" alt=""> </a>
+
+
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav align-items-end ml-auto">
+            <li class="nav-item">
+         <a class="nav-link" href="about.html">About</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="initiatives.html">Initiatives</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="redesign.html">Classroom Redesign</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="approach.html">Approach</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="news.html">News and Reports</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="feedback.html">Feedback</a>
+       </li>
+          </ul>
+        </div>
+      </nav>
+
+      <style>
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+        .container-fluid {
+          padding: 0;
+        }
+
+        .navcon {
+          padding: 0;
+        }
+
+        .navbar {
+          background-color: #012A5D;
+        }
+
+        #navlogo {
+          width: 150px;
+          margin: auto auto auto auto;
+        }
+
+        .TIL_Logo {
+          position: relative;
+          left: 1rem;
+          margin-right: 2rem;
+        }
+
+        .nav-item {
+          padding: 0 2rem;
+        }
+
+        .nav-link {
+          font-size: 15px;
+          text-align: center;
+          padding: auto 30px auto 30px;
+        }
+      </style>
+
+
+<!--Body Content-->
+
+
+
+      <div class="container">
+        <div class="row">
+          <h1 class="pagetit">News and Reports</h1>
+
+          <style media="screen">
+            .pagetit {
+              color: #012A5D;
+              padding: 2rem 0 3rem 0;
+            }
+          </style>
+        </div>
+        <div class="row">
+
+          <!--Headline Left-->
+          <div class="col-6 headline">
+<img class="headim" src="http://blogs.studentlife.utoronto.ca/innovationhub/files/2021/06/Asset-5-300x269.png" alt="">
+            <div class="row headline">
+
+            </div>
+
+                <div class="row">
+              <h6 class="headtit" >Georgia Maxwell | June 28, 2021</h6>
+              <br>
+              <h4 class="headline"><Strong>All About The TIL Operations Working Group</strong></h4>
+            </div>
+            <div class="row">
+              <p class="bigdes">
+            Transforming the Instructional Landscape (TIL) is an ongoing project at the University of Toronto that examines how learning environments can be improved for both instructors and students. TIL employs design thinking to help build better learning environments with students rather than for students. A wide range of professionals from across UofT are also involved in the project’s exciting and innovative work. </p>
+<a class="communityp" href="http://blogs.studentlife.utoronto.ca/innovationhub/all-about-the-til-operations-working-group/"> Continue reading <i class="fas fa-arrow-right"></i> </a>
+            </div>
+<div class="row">
+  <a class="reportbut" href="news\reports.html"><button type="button" class="btn btn-secondary">Report Repository</button></a>
+
+
+</div>
+
+
+          </div>
+
+<style media="screen">
+
+
+.bigdes {
+  padding-right: 2rem;
+}
+
+.reportbut {
+      padding: 3rem 0 1rem 0;
   }
 
-  .nav-item {
-    padding: 0 2rem;
+}
+
+.headline {
+    padding: 0 0 1rem 0;
+}
+
+
+.btn {
+  border-radius: 24px;
+}
+
+  .headim {
+    width: 80%;
+    padding: 2rem 0 2rem 0;
   }
 
-  .nav-link {
-  font-size: 15px;
-  text-align: center;
-  padding: auto 30px auto 30px;
+h4 {
+  color: #012A5D;
+}
+  .headtit {
+    color: #7FCFE7;
+    padding: 1rem 0;
   }
+
+a {
+  color: #c7c2bc;
+}
+
 </style>
 
-    <h1>News and Reports</h1>
-
-    <ul class="linklist">
-      <li class="l1"> <a href="news\reports.html"> Report Repository </a> </li>
-      <li class="l2"> <a href="news\blog.html"> Blog and Announcements </a> </li>
-    </ul>
 
 
+
+
+          <!--Newsfeed Right-->
+
+          <div class="col-6 feed" style="
+    padding-left: 0px;
+    padding-right: 0px;">
+
+            <div class="row row1">
+              <div class="col-4 pic">
+                <img class="lilpic" src="http://blogs.studentlife.utoronto.ca/innovationhub/files/2021/06/Learning-and-Growing-in-Community-1-1-150x150.jpg" alt="">
+            </div>
+            <div class="col-8 des">
+              <div class="row lilinfo">
+            <p class="writer" >Georgia Maxwell and Kaitlyn Corlett | June 14, 2021</p>
+            <br>
+            <p class="liltit"> <strong> A New Vision for TIL</strong></p>
+
+
+            <p class="lildes">
+          Since it was established in 2017, the Transforming the Instructional Landscape (TIL) project has renovated an impressive 93 classrooms to date.  </p>
+<a class="continue" href="http://blogs.studentlife.utoronto.ca/innovationhub/a-new-vision-for-til/"> Continue reading <i class="fas fa-arrow-right"></i> </a>
+</div>
+            </div>
+            </div>
+
+
+<style media="screen">
+
+.lilinfo {
+  padding: 1px 0 1px 5px;
+  margin: 10px 5px;
+}
+
+  .lilpic {
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .writer {
+    color: #7FCFE7;
+    font-size: 10px;
+margin: 0 0 5px 0
+  }
+
+.liltit {
+  color: #012A5D;
+  font-size: 20px;
+  margin: 0
+}
+
+.lildes {
+  font-size: 12px;
+  margin: 0;
+}
+
+.continue {
+  font-size: 15px;
+}
+
+</style>
+
+
+
+
+
+            <div class="row row1">
+              <div class="col-4 pic">
+                <img class="lilpic" src="http://blogs.studentlife.utoronto.ca/innovationhub/files/2021/06/TIL_ThemeVisual-1-768x682.png" alt="">
+            </div>
+            <div class="col-8 des">
+              <div class="row lilinfo">
+            <p class="writer" >Nicholas Smith  | August 24, 2020</p>
+            <br>
+            <p class="liltit"> <strong> What Does Trust Look Like in Online Spaces?</strong></p>
+
+
+            <p class="lildes">
+          As the UofT community continues to navigate the transition to online learning, maintaining bonds of trust amongst instructors, staff, and students has become increasingly important.  </p>
+<a class="continue" href="http://blogs.studentlife.utoronto.ca/innovationhub/what-does-trust-look-like-in-online-spaces-an-overview-of-tils-latest-report/"> Continue reading <i class="fas fa-arrow-right"></i> </a>
+</div>
+            </div>
+
+            <div class="row row2">
+              <div class="col-4 pic">
+                <img class="lilpic" src="http://blogs.studentlife.utoronto.ca/innovationhub/files/2021/06/Report-Icons_Build-community-150x150.png" alt="">
+            </div>
+            <div class="col-8 des">
+              <div class="row lilinfo">
+            <p class="writer" >Georgia Maxwell and Marcus Lomboy | May 10, 2021</p>
+            <br>
+            <p class="liltit"> <strong> Transforming The Instructional Landscape</strong></p>
+
+
+            <p class="lildes">
+          For the past four years, the Innovation Hub has teamed up with the Learning Space Management (LSM) Team to examine how learning environments can be improved for both instructors and students.    </p>
+<a class="continue" href="http://blogs.studentlife.utoronto.ca/innovationhub/transforming-the-instructional-landscape-what-weve-learned-about-transcripts/"> Continue reading <i class="fas fa-arrow-right"></i> </a>
+</div>
+            </div>
+
+
+
+
+
+
+
+            <div class="row row3">
+              <div class="col-4 pic">
+                <img class="lilpic" src="http://blogs.studentlife.utoronto.ca/innovationhub/files/2020/09/Nick-Smith-150x150.jpg" alt="">
+            </div>
+            <div class="col-8 des">
+              <div class="row lilinfo">
+            <p class="writer" >Nicholas Smith | April 26, 2021</p>
+            <br>
+            <p class="liltit"> <strong> Transforming the Instructional Landscape</strong></p>
+
+
+            <p class="lildes">
+          What happens when you support instructors as they experiment with technology? During the Winter semester of 2021, the Transforming the Instructional Landscape (TIL) Pilot Project did just that. </p>
+<a class="continue" href="http://blogs.studentlife.utoronto.ca/innovationhub/transforming-the-instructional-landscape-the-results-from-our-pilot-program-are-in/"> Continue reading <i class="fas fa-arrow-right"></i> </a>
+</div>
+            </div>
+
+            <div class="row row4">
+              <div class="col-4 pic">
+                <img class="lilpic" src="http://blogs.studentlife.utoronto.ca/innovationhub/files/2021/06/Report-Icons_Community-Support-300x300.png" alt="">
+            </div>
+            <div class="col-8 des">
+              <div class="row lilinfo">
+            <p class="writer" >Nicholas Smith | November 16, 2020</p>
+            <br>
+            <p class="liltit"> <strong> How Online Learning can be Improved Through Learner-Centered Design</strong></p>
+
+
+            <p class="lildes">
+          The COVID-19 pandemic greatly accelerated the integration of digital technology into instructional spaces, introducing discomfort and uncertainty into previously familiar terrain.   </p>
+  <a class="continue" href="http://blogs.studentlife.utoronto.ca/innovationhub/how-online-learning-can-be-improved-through-learner-centered-design/"> Continue reading <i class="fas fa-arrow-right"></i> </a>
+  </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col text-center">
+
+
+        <a class="reportbut" href="news\blog.html"><button type="button" class="btn btn-secondary">See All News</button></a>
+
+</div>
+      </div>
+
+      <style>
+
+      .container {
+        width: 1220px;
+      }
+
+.report {
+  margin: 3rem 0;
+  padding: 0;
+  text-align: left;
+}
+
+
+.feed {
+  padding: auto 0;
+}
+
+  .row1{
+
+margin: 1rem auto;}
+
+
+
+.row2{
+
+margin: 1rem auto;}
+
+.row3{
+
+margin: 1rem auto;}
+
+.row4{
+
+margin: 1rem auto;}
+
+.row5{
+
+margin: 1rem auto;}
+
+
+
+
+.pic {
+
+  border: 1px solid gray;
+}
+
+
+
+      </style>
+
+
+
+<!--
+
+
+
+      <h1>News and Reports</h1>
+
+      <ul class="linklist">
+        <li class="l1"> <a href="news\reports.html"> Report Repository </a> </li>
+        <li class="l2"> <a href="news\blog.html"> Blog and Announcements </a> </li>
+      </ul>
+
+-->
 
 
 </body>
+
 </html>
